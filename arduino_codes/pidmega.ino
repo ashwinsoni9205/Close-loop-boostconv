@@ -75,8 +75,8 @@ ISR(TIMER0_COMPA_vect) {
     // Read voltage and current
     float R1 = 19.5600; 
     float Req = 1029.5600;
-    float sensedVoltage = adc_read(0) * (5.0000 / 1023.0000) * (Req/R1); // Adjust scaling as needed
-    float rawVoltage = adc_read(1) * (5.0000 / 1023.0000);  // THIS IS FOR THE CURRENT SENSOR // Adjust scaling as needed
+    float sensedVoltage = adc_read(0) * (5.0000 / 1023.0000) * (Req/R1); //Can Adjust scaling as needed
+    float rawVoltage = adc_read(1) * (5.0000 / 1023.0000);  // THIS IS FOR THE CURRENT SENSOR //Can Adjust scaling as needed
     float sensedCurrent = ((rawVoltage-2.5000)/0.1000); 
 
 
